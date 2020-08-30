@@ -12,52 +12,52 @@ We are going to create a CRUD app using our knowledge of _routes_ and _controlle
 
 #### 1. Index
 
-* In the `index.js` file, import and use the `bodyParser` in order to ensure that the body from our POST requests is appropriately cast to JSON.
+* In the `index.js` file, import and use the `bodyParser` in order to ensure that the body from our POST requests is appropriately cast to JSON. *DONE*
 
 #### 2. Routes
 
 We will create five routes. The data for these routes is provided in the `data` folder. It is up to you to make use of this data correctly. For the POST route you may import and use the `sampleUser` file instead of creating a user manually.
 
-* Create a `routes` folder to hold our routes. Underneath make a file called `users.js` to represent the users router
+* Create a `routes` folder to hold our routes. Underneath make a file called `users.js` to represent the users router *DONE*
 
 * Create the following routes inside `users.js`
 
 * GET /users
-  * Return all users
+  * Return all users  *DONE*
 
 * GET /users/:id
-  * Return just the user that matches the path param (id)
+  * Return just the user that matches the path param (id)  *DONE*
 
 * POST /users
-  * Create a new user (sampleUser). Find a way to increment the id so that we always insert the next available id in the list. Currently we have users 1-10 (_data/index_). The next user should be 11
+  * Create a new user (sampleUser). Find a way to increment the id so that we always insert the next available id in the list. Currently we have users 1-10 (_data/index_). The next user should be 11  *DONE*
 
 * PUT /users/:id
-  * Update one user matching the path param (id). You may again use the sampleUser code as your "body" for this request
+  * Update one user matching the path param (id). You may again use the sampleUser code as your "body" for this request  *DONE*
 
 * DELETE /users/:id
-  * Delete one user by it's id
+  * Delete one user by it's id  *DONE*
 
 _You may chose to alter these routes so they appear as ('/', '/:id') in your users file and then prefix them all with '/users' when we import them into index.. but you are not required to do so_
 
 #### 3. Controllers
 
-* Create a `controllers` folder to hold our routes. Underneath make a file called `users.js` to represent the users controller
+* Create a `controllers` folder to hold our routes. Underneath make a file called `users.js` to represent the users controller *DONE*
 
 We will create five controller functions. These will correspond to the routes above. ALL LOGIC for retrieving or updating the "data" should be done here. After that is complete we will import these controller functions into the routes. The end result of your routes should look like this: `router.get('/users', usersController.listUsers)`. Create the following controller functions:
 
-* listUsers
+* listUsers  *DONE*
   * Should retrieve the entire array from _data/index_
 
-* showUser
+* showUser  *DONE*
   * Should retrieve just the user that matches the passed-in id
 
-* createUser
+* createUser  *DONE*
   * Should add a user to the array
 
-* updateUser
+* updateUser  *DONE*
   * Should update one user in the array based on its id
 
-* deleteUser
+* deleteUser  *DONE*
   * Should delete one user from the array based on its id
 
 
