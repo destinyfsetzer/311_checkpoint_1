@@ -1,7 +1,7 @@
 const users = require('./../data/index')
 let counter = users.length+1
 
-// * listUsers  *DONE*
+// * listUsers
 //   * Should retrieve the entire array from _data/index_
 const listUsers = (req, res) => {
 res.json(users)
@@ -31,7 +31,13 @@ const updateUser = (req, res) => {
     foundUser.phone = req.body.phone ? req.body.phone : foundUser.phone
     foundUser.website = req.body.website ? req.body.website : foundUser.website
     foundUser.company = req.body.company ? req.body.company : foundUser.company
-     res.json(foundUser)
+    // if this doesn't work anymore this is why
+      if (foundUser) {
+        foundUser.isActive = false
+        res.send(`${req.params.id} is gone`)
+    } else {
+        res.status(400).json({message: `No user with the id of ${req.params.userId}`})
+    }
 }
 
 // * deleteUser
