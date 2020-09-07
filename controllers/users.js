@@ -11,14 +11,13 @@ res.json(users)
 // * showUser **DONE**
 //   * Should retrieve just the user that matches the passed-in id
 const showUser = (req, res) => {
-      let foundUser = users.find( user => user.id === parseInt(req.params.id))
-      if (foundUser) {
-        foundUser.isActive = false
-        res.send(foundUser)
-    } else {
+      let foundUser = data.find(data =>data.id === parseInt(req.params.id))
+      if (foundUser.isActive === false) {
         res.status(404).json({message: `No user with the id of ${req.params.id}`})
+      } else {
+      res.json(foundUser)
+      }
     }
-}
 
 // * createUser  **DONE**
 //   * Should add a user to the array
